@@ -1,0 +1,14 @@
+{
+	"comment": {
+		"type": "string",
+		"title": "Comment"
+	},
+	"name": {
+		"type": "string",
+		"title": "Name"
+	},
+	"age": {
+		"type": "number",
+		"title": "Age"
+	}
+}

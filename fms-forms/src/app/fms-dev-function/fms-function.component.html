@@ -1,0 +1,33 @@
+<p-card [style]="{width: '360px'}" styleClass="ui-card-shadow" header="{{cardHeader}}">
+
+  <!-- <p-header>
+      {{cardHeader}}
+  </p-header> -->
+
+  <div class="ui-inputgroup">
+      <!-- <div class="ui-g" style="width:250px;margin-bottom:10px"> -->
+      <div class="ui-g">
+        <div class="ui-g-12"><p-radioButton name="group1" value="TRUE"   label="TRUE"   [(ngModel)]="val1" inputId="opt1"></p-radioButton></div>
+        <div class="ui-g-12"><p-radioButton name="group1" value="FALSE"  label="FALSE"  [(ngModel)]="val1" inputId="opt2"></p-radioButton></div>
+        <div class="ui-g-12"><p-radioButton name="group1" value="CODE"   label="CODE"   [(ngModel)]="val1" inputId="opt3"></p-radioButton></div>
+        <div class="ui-g-12"><p-radioButton name="group1" value="#LOGIN" label="#LOGIN" [(ngModel)]="val1" inputId="opt4"></p-radioButton></div>
+      </div>
+      
+      <p-card>
+        <p-header>
+          function(){{ '{' }}
+        </p-header>
+        <textarea pInputTextarea></textarea>
+        <p-footer>
+           {{ '}' }}
+        </p-footer>
+      </p-card>
+
+  </div>
+
+
+  <p-footer>
+       <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: .25em"></button>
+       <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary"></button>
+   </p-footer>
+</p-card>

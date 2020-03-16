@@ -1,0 +1,30 @@
+
+
+
+
+<mat-grid-list cols="4" rowHeight="100px" gutterSize="5px" >
+
+
+
+  <mat-grid-tile *ngFor="let tile of tiles"
+  
+ [style.border]="tile.border">
+
+ <mat-card class="scrollable-content">
+   <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+
+
+   <mat-form-field   *ngFor="let entry of this.schema;">
+       <mat-label>{{ entry[0] }}</mat-label>
+       <input matInput placeholder="Lütfen boş bırakmayınız" value="">
+    </mat-form-field>
+
+  </cdk-virtual-scroll-viewport>
+
+ </mat-card>
+
+
+
+ </mat-grid-tile>
+
+</mat-grid-list>

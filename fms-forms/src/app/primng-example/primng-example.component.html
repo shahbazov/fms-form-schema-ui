@@ -1,0 +1,52 @@
+
+
+<!-- <i class="pi pi-check"></i>
+<i class="pi pi-times"></i>
+<p-inputSwitch formControlName="enabled"></p-inputSwitch>
+<p-calendar formControlName="date"></p-calendar> -->
+
+<br/>
+
+
+
+<div class="ui-g">
+    <div class="ui-g-10">
+
+
+    </div>
+
+    <div class="ui-g-2">
+
+    </div>
+
+ </div>
+
+
+
+ <div  *ngFor="let entry of this.schema;">
+     <div class="ui-g-2"><label for="vin">{{ entry[0] }}</label></div>
+     <div class="ui-g-10">
+       <p-dropdown *ngIf="entry[1].islist" [options]="fmsoptions" [(ngModel)]="selectedCar1"  editable="true" placeholder="Select a Brand" ></p-dropdown>
+       <input *ngIf="entry[1].istext" pInputText id="vin" />
+       <p-fieldset *ngIf="entry[1].isobject" legend="Sub Object" [toggleable]="true" [collapsed]="true">
+          <div  *ngFor="let x of entry[1].properties;">
+             <div class="ui-g-4"><label for="vin">{{ x[0] }}</label></div>
+             <input   pInputText id="vin" />
+          </div>
+       </p-fieldset>
+
+       <p-fieldset *ngIf="entry[1].fmsevent" legend="Event Component" [toggleable]="true" [collapsed]="true">
+          <app-fms-events></app-fms-events>
+       </p-fieldset>
+
+       <p-fieldset *ngIf="entry[1].fmsfunc" legend="Function Component" [toggleable]="true" [collapsed]="true">
+          <app-fms-function></app-fms-function>
+       </p-fieldset>
+
+       <p-fieldset *ngIf="entry[1].fmsactions" legend="Action Component" [toggleable]="true" [collapsed]="true">
+          <app-fms-def-action></app-fms-def-action>
+       </p-fieldset>
+
+
+     </div>
+  </div>
