@@ -1,0 +1,87 @@
+# first off all we start with creatigng a agular-cli project as mentioned in offical documanetation
+
+npm install -g @angular/cli
+
+ng --version
+
+ng new fms-forms;
+cd fms-forms;
+
+
+
+# primeng
+npm install primeng --save
+npm install primeicons --save
+npm install @angular/animations --save
+npm install @angular/cdk --save
+
+
+npm install primeflex --save
+"styles": [
+  "node_modules/primeflex/primeflex.css"
+],
+
+
+# material
+ng add @angular/material
+
+ng g component fmsFormSchema --project fms-forms
+
+ng g component primngExample --project fms-forms
+
+ng g component plainExample --project fms-forms
+
+ng g class hero
+
+
+chown -R telman:telman *
+
+
+ng g component fmsAutoComplete --project fms-forms
+
+ng g module fms-auto-complete --project fms-forms
+
+
+
+
+
+
+ng g service ldapRoles
+
+ng serve --host 0.0.0.0 --port 8080
+
+ctrl + c
+
+
+# now we waponize an exsting abgular-cli project with primeng
+
+npm install primeng --save
+npm install primeng-lts --save
+
+
+# troubleshooting
+
+npm cache clean --force
+npm install typescript -y
+
+
+# primeng examples
+
+git clone https://github.com/primefaces/primeng-quickstart-cli.git
+
+ng --version
+
+# require angular cli version 6
+
+
+# downgrade to version 6
+npm uninstall -g @angular/cli
+npm cache clean
+npm cache clean --force
+npm install -g @angular/cli@6.1.1
+
+
+npm install --save-dev @angular-devkit/build-angular
+
+
+

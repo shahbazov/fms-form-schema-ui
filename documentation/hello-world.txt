@@ -1,0 +1,51 @@
+mkdir /tmp/node-demo
+cd /tmp/node-demo
+
+npm init -y
+
+Wrote to /tmp/node-demo/package.json:
+
+{
+  "name": "node-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+vim index.js
+
+const express = require('express');
+
+const PORT = 8080;
+const HOST = '0.0.0.0';
+
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Hello Node.js World\n');
+});
+
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);
+
+npm install -save express
+
+vim package.json
+
+"script":{
+   ...
+   "start": "node index.js"
+}
+
+node index.js 
+or
+npm start
+
+#debug
+node --inspect index.js 
+
