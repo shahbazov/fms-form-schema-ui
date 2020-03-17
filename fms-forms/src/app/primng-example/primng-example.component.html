@@ -1,29 +1,7 @@
-
-
-<!-- <i class="pi pi-check"></i>
-<i class="pi pi-times"></i>
-<p-inputSwitch formControlName="enabled"></p-inputSwitch>
-<p-calendar formControlName="date"></p-calendar> -->
-
 <br/>
-
-
-
-<div class="ui-g">
-    <div class="ui-g-10">
-
-
-    </div>
-
-    <div class="ui-g-2">
-
-    </div>
-
- </div>
-
-
-
- <div  *ngFor="let entry of this.schema;">
+<h1>FMS Form</h1>
+<br/>
+<div  *ngFor="let entry of this.schema;">
      <div class="ui-g-2"><label for="vin">{{ entry[0] }}</label></div>
      <div class="ui-g-10">
        <p-dropdown *ngIf="entry[1].islist" [options]="fmsoptions" [(ngModel)]="selectedCar1"  editable="true" placeholder="Select a Brand" ></p-dropdown>
@@ -46,7 +24,6 @@
        <p-fieldset *ngIf="entry[1].fmsactions" legend="Action Component" [toggleable]="true" [collapsed]="true">
           <app-fms-def-action></app-fms-def-action>
        </p-fieldset>
-
 
      </div>
   </div>

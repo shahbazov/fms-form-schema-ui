@@ -1,4 +1,4 @@
-<p-card [style]="{width: '360px'}" styleClass="ui-card-shadow" header="{{cardHeader}}">
+<p-card [style]="{width: '460px'}" styleClass="ui-card-shadow" header="{{cardHeader}}">
 
   <!-- <p-header>
       {{cardHeader}}
@@ -9,19 +9,21 @@
       <div class="ui-g">
         <div class="ui-g-12"><p-radioButton name="group1" value="TRUE"   label="TRUE"   [(ngModel)]="val1" inputId="opt1"></p-radioButton></div>
         <div class="ui-g-12"><p-radioButton name="group1" value="FALSE"  label="FALSE"  [(ngModel)]="val1" inputId="opt2"></p-radioButton></div>
-        <div class="ui-g-12"><p-radioButton name="group1" value="CODE"   label="CODE"   [(ngModel)]="val1" inputId="opt3"></p-radioButton></div>
+        <div class="ui-g-12"><p-radioButton name="group1" value="FUNC"   label="FUNC"   [(ngModel)]="val1" inputId="opt3"></p-radioButton></div>
+        <div class="ui-g-12"><p-radioButton name="group1" value="BSON"   label="BSON"   [(ngModel)]="val1" inputId="opt3"></p-radioButton></div>
         <div class="ui-g-12"><p-radioButton name="group1" value="#LOGIN" label="#LOGIN" [(ngModel)]="val1" inputId="opt4"></p-radioButton></div>
       </div>
-      
+
       <p-card>
         <p-header>
-          function(){{ '{' }}
+          function(filter,record) or query {{ '{' }}
         </p-header>
         <textarea pInputTextarea></textarea>
         <p-footer>
            {{ '}' }}
         </p-footer>
       </p-card>
+
 
   </div>
 
